@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from 'react'
-import { Eye, EyeOff, ArrowLeft, Leaf, Loader2 } from 'lucide-react'
+import { Eye, EyeOff, ArrowLeft, Loader2 } from 'lucide-react'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { useAuth } from '../../context/AuthContext'
 
@@ -68,9 +68,11 @@ function Login() {
             </div>
 
             <div>
-              <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/15">
-                <Leaf size={28} />
-              </div>
+              <img
+                src="/logo.svg"
+                alt="Green Basket Grocery"
+                className="mb-6 h-14 w-14 rounded-2xl shadow-lg ring-2 ring-white/20"
+              />
 
               <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-moss-light">
                 Green Basket Grocery

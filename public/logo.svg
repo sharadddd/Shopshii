@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <!-- Background Gradient: Rich Deep Moss to Forest -->
+    <linearGradient id="gbBg" x1="8" y1="4" x2="56" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#447558"/>
+      <stop offset="45%" stop-color="#355e45"/>
+      <stop offset="100%" stop-color="#234230"/>
+    </linearGradient>
+
+    <!-- Fresh Leaf Gradient: Sunlit Sprout Green -->
+    <linearGradient id="leafPrimary" x1="26" y1="10" x2="44" y2="30" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#a8d584"/>
+      <stop offset="50%" stop-color="#7eb856"/>
+      <stop offset="100%" stop-color="#558a36"/>
+    </linearGradient>
+
+    <linearGradient id="leafSecondary" x1="18" y1="14" x2="32" y2="28" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#c4e49f"/>
+      <stop offset="100%" stop-color="#8bbd60"/>
+    </linearGradient>
+
+    <!-- Warm Amber Harvest Accent -->
+    <linearGradient id="amberAccent" x1="20" y1="28" x2="44" y2="32" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f2b45b"/>
+      <stop offset="100%" stop-color="#c97d2a"/>
+    </linearGradient>
+
+    <!-- Cream Basket Body -->
+    <linearGradient id="basketBody" x1="32" y1="28" x2="32" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#ede8e0"/>
+    </linearGradient>
+
+    <!-- Drop Shadow for Dimensionality -->
+    <filter id="subtleShadow" x="-10%" y="-10%" width="125%" height="125%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#14261b" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Base App Tile / Squircle with Soft Rounded Radius -->
+  <rect width="64" height="64" rx="18" fill="url(#gbBg)"/>
+  
+  <!-- Subtle Inner Specular Rim -->
+  <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="17.25" stroke="#ffffff" stroke-opacity="0.15" stroke-width="1.5"/>
+
+  <!-- Logo Mark Group with Shadow -->
+  <g filter="url(#subtleShadow)">
+    
+    <!-- Basket Arch Handle -->
+    <path d="M23 27C23 19.5 27 15 32 15C37 15 41 19.5 41 27" 
+          stroke="#f7f3ed" 
+          stroke-width="3" 
+          stroke-linecap="round"/>
+
+    <!-- Left Organic Leaf -->
+    <path d="M31.5 24C31.5 24 23 23 21 16.5C19.5 11.5 24 8.5 28 11.5C32.5 15 31.5 21 31.5 24Z" 
+          fill="url(#leafSecondary)"/>
+
+    <!-- Right Organic Main Leaf -->
+    <path d="M32 26C32 26 42 24.5 44 16C45.5 9.5 39 7 34 11C29 15 31 23 32 26Z" 
+          fill="url(#leafPrimary)"/>
+
+    <!-- Leaf Center Stem Vein -->
+    <path d="M32.5 25C33.2 21 35.5 16 38.5 12.5" 
+          stroke="#ffffff" 
+          stroke-opacity="0.7" 
+          stroke-width="1.2" 
+          stroke-linecap="round"/>
+
+    <!-- Ripe Harvest Amber Berry Accent -->
+    <circle cx="27" cy="27" r="3.2" fill="url(#amberAccent)"/>
+    <circle cx="26" cy="25.8" r="0.9" fill="#ffffff" fill-opacity="0.6"/>
+
+    <!-- Main Basket Body -->
+    <path d="M16 28.5C16 27.67 16.67 27 17.5 27H46.5C47.33 27 48 27.67 48 28.5V29C48 29.35 47.88 29.69 47.66 29.96L43.8 34.6L41.6 47.2C41.3 49.3 39.5 50.8 37.4 50.8H26.6C24.5 50.8 22.7 49.3 22.4 47.2L20.2 34.6L16.34 29.96C16.12 29.69 16 29.35 16 29V28.5Z" 
+          fill="url(#basketBody)"/>
+
+    <!-- Rim Lip Accent Line -->
+    <path d="M17 29.5H47" 
+          stroke="#355e45" 
+          stroke-width="1.8" 
+          stroke-linecap="round"/>
+
+    <!-- Handcrafted Woven Basket Texture Lines -->
+    <path d="M22 36H42" 
+          stroke="#3d6b4f" 
+          stroke-width="1.7" 
+          stroke-linecap="round" 
+          stroke-dasharray="0.5 3"/>
+
+    <path d="M24 43H40" 
+          stroke="#3d6b4f" 
+          stroke-width="1.7" 
+          stroke-linecap="round" 
+          stroke-dasharray="0.5 3"/>
+
+    <!-- Vertical Weave Strands -->
+    <path d="M27.5 31V48.5" 
+          stroke="#3d6b4f" 
+          stroke-width="1.6" 
+          stroke-linecap="round"/>
+
+    <path d="M36.5 31V48.5" 
+          stroke="#3d6b4f" 
+          stroke-width="1.6" 
+          stroke-linecap="round"/>
+
+  </g>
+</svg>

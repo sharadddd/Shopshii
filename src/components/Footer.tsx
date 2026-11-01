@@ -11,13 +11,21 @@ function Footer() {
 
           {/* Brand */}
           <div className="lg:col-span-2">
-            <a href="#home" className="inline-block">
-              <div className="font-display text-2xl font-bold text-bark">
-                Green Basket
-              </div>
+            <a href="#home" className="inline-flex items-center gap-3.5">
+              <img
+                src="/logo.svg"
+                alt="Green Basket Grocery"
+                className="h-11 w-11 rounded-2xl shadow-sm"
+              />
 
-              <div className="text-xs font-medium uppercase tracking-[0.25em] text-moss">
-                Grocery
+              <div className="flex flex-col">
+                <div className="font-display text-2xl font-bold leading-tight text-bark">
+                  Green Basket
+                </div>
+
+                <div className="text-[11px] font-semibold uppercase tracking-[0.24em] text-moss">
+                  Grocery
+                </div>
               </div>
             </a>
 

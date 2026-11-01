@@ -112,19 +112,27 @@ const { wishlistCount } = useWishlist()
         {/* Logo */}
         <Link
           to="/"
-          className="group"
+          className="group flex items-center gap-3.5"
           onClick={() => {
             setIsMenuOpen(false)
             setIsSearchOpen(false)
           }}
         >
-          <h1 className="font-display text-2xl font-bold text-bark">
-            Green Basket
-          </h1>
+          <img
+            src="/logo.svg"
+            alt="Green Basket Grocery"
+            className="h-11 w-11 rounded-2xl shadow-sm transition-all duration-300 group-hover:scale-105 group-hover:shadow"
+          />
 
-          <p className="text-xs font-medium uppercase tracking-[0.2em] text-moss">
-            Grocery
-          </p>
+          <div className="flex flex-col">
+            <span className="font-display text-2xl font-bold leading-tight text-bark transition group-hover:text-moss">
+              Green Basket
+            </span>
+
+            <span className="text-[11px] font-semibold uppercase tracking-[0.24em] text-moss">
+              Grocery
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}
