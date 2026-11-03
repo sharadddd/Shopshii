@@ -29,14 +29,10 @@ export function clearAuthToken(): void {
   localStorage.removeItem('slipcart_token')
 }
 
-// In Vite development, route through '/api-proxy' to avoid browser CORS blocks.
-// In production builds, target the deployed backend directly.
+// In Vite development and standard deployments, route through '/api-proxy' to avoid browser CORS blocks.
+// If an absolute VITE_API_BASE_URL is provided, it will be used directly with automatic proxy fallback.
 const envBase = import.meta.env.VITE_API_BASE_URL
-const defaultBackendUrl = 'https://slipcartbackend.onrender.com'
-
-const rawBaseUrl = import.meta.env.PROD
-  ? (!envBase || envBase === '/api-proxy' ? defaultBackendUrl : envBase)
-  : (envBase || '/api-proxy')
+const rawBaseUrl = envBase || '/api-proxy'
 
 export const API_BASE_URL = rawBaseUrl.replace(/\/+$/, '')
 
@@ -128,9 +124,9 @@ export async function apiRequest<T>(
       headers,
     })
   } catch (networkError) {
-    // If in Vite dev mode and direct call failed (e.g. browser blocked CORS preflight),
-    // automatically retry via the Vite dev reverse proxy '/api-proxy'.
-    if (import.meta.env.DEV && !url.startsWith('/api-proxy')) {
+    // If direct call failed (e.g. browser blocked CORS preflight or network error),
+    // automatically retry via same-origin reverse proxy '/api-proxy'.
+    if (!url.startsWith('/api-proxy')) {
       try {
         let proxyUrl = `/api-proxy${normalizedPath}`
         if (queryString) {
